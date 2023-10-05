@@ -1,0 +1,354 @@
+html{
+    scroll-behavior: smooth;
+}
+
+/* Estilos para el video de fondo */
+.video_muted {
+    position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Utiliza object-fit para cubrir toda la pantalla */
+        z-index: -1; /
+    
+}
+
+/* Estilos generales */
+body {
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, Helvetica, sans-serif;
+    padding: 0;
+    text-align: center;
+    background: linear-gradient(
+        90deg,
+        #f0f0f0,
+        hsl(0, 0%, 20%)
+    );
+}
+
+/* Barra de Navegación */
+#navbar {
+    background: linear-gradient(
+        -90deg,
+        hsl(0, 0%, 24%),
+        hsl(0, 0%, 20%)
+    );
+    position: sticky;
+    top: 0;
+    height: 3em;
+}
+#navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+#navbar li {
+    margin-right: 20px;
+    transition: transform 0.3s;
+}
+#navbar li:hover{
+    transform: translateY(1rem);
+}
+#navbar a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.7em;
+}
+
+/* Sección de Bienvenida */
+#welcome-section {
+    
+    height: 100vh;
+    max-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    background: linear-gradient(
+        90deg,
+        #f0f0f0,
+        hsl(0, 0%, 20%)
+    )
+}
+.welcome_text{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: #d6d6d6;
+  text-shadow:  #464646;
+}
+#welcome-section h1 {
+    font-size: 5vw;
+    background: linear-gradient(to right, #464646, #d6d6d6);
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-color: #fff;
+    color: transparent; /* Color transparente del texto */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    transition: 3s;
+}
+#welcome-section h1:hover{
+    transform: scale(1.5);
+}
+/* seccion de descripcion */
+
+
+.section_description {
+    margin: 2.5em auto;
+    border: 1px solid transparent;
+    border-radius: 1em;
+    background-color: #f0f0f0;
+    width: 90%;
+    max-width: 800px; /* Limitar el ancho para mantenerlo responsivo */
+    box-shadow: 0px 3px 6px 3px rgba(0, 0, 0, 0.5);
+    text-align: center; /* Centrar el contenido */
+    padding: 20px; /* Agregar espacio interno */
+    box-sizing: border-box; /* Incluir el padding en el ancho total */
+  }
+  
+  
+  .h2_description {
+    font-size: 3vw;
+    background: linear-gradient(to right, #464646, #d6d6d6);
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-color: #fff;
+    color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.452);
+  }
+  
+  
+  .p_description {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, Helvetica, sans-serif;
+    font-size: 2vw; /* Tamaño de fuente ajustado para ser responsivo */
+  }
+  
+  
+  .img_description {
+    width: 40%; /* Tamaño de la imagen ajustado */
+    max-width: 200px; /* Limitar el ancho máximo */
+    border: 0.5vh solid grey;
+    border-radius: 50%;
+    margin: 20px auto; /* Centrar la imagen horizontalmente */
+    display: block; /* Convertir la imagen en un bloque para centrarla */
+    text-shadow: 0em 3em 6em 0em rgba(0, 0, 0, 0.5);
+    transition: transform 300ms;
+}
+  .img_description:hover{
+    transform: scale(1.1);
+  }
+  
+  
+  
+  .ul_atributos,
+  .ul_description,
+  .ul_lenguajes {
+    border: 0.5vh solid grey;
+    border-radius: 1em;
+    background: linear-gradient(90deg, #f0f0f0, hsla(0, 0%, 20%, 0.596));
+    width: 80%; /* Ancho ajustado para ser responsivo */
+    max-width: 400px; /* Limitar el ancho máximo */
+    margin: 20px auto; /* Centrar las listas horizontalmente */
+    padding: 10px; /* Agregar espacio interno */
+    box-sizing: border-box; /* Incluir el padding en el ancho total */
+    text-align: center; /* Alinear el texto a la izquierda */
+    text-shadow: 0em 3em 6em 0em rgba(0, 0, 0, 0.5);
+    list-style: none;
+    font-size: 1.5em;
+  }
+  
+    
+  
+/* Sección de Proyectos */
+#projects {
+    margin-left: 23%;
+    padding: 1em;
+    width: 50%;
+    border-radius: 1em 1em 1em 1em;
+    box-shadow: 0px 3px 6px 3px black;
+    max-height: 300px;
+    overflow-y: auto; /* Barra de desplazamiento vertical */
+} 
+.project-tile {
+    
+    background-color: #f0f0f0;
+    margin: 10px 0;
+    padding: 20px;
+    border-radius: 5px;
+}
+.project-tile h2 {
+    font-size: 1.5em;
+}
+.project-tile p {
+    font-size: 1em;
+}
+.project_buttom{
+    border-radius: 0.5em 0.5em 0.5em 0.5em;
+    border: 1.5px solid grey;
+    transition: transform 0.5s ;
+   
+}
+.project_buttom:hover{
+    transform: scale(1.3);
+    background: linear-gradient(90deg, #f0f0f0, hsla(0, 0%, 20%, 0.596));
+
+}
+/* certificaciones */
+.certifications {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 60vw;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 6vw;
+}
+
+.certifications ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: 2rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, Helvetica, sans-serif;
+    
+}
+
+.certification_h3{
+    background: linear-gradient(to right, #464646, #d6d6d6);
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-color: #fff;
+    color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.452);
+}
+
+.certifications li {
+    margin: 10px 0;
+    font-size: 0.5em;
+    cursor: pointer;
+    transition: transform 0.6s;
+}
+
+.certifications a {
+    text-decoration: none;
+    color: #007BFF; /* Color del enlace */
+    font-weight: bold;
+}
+
+.certifications li:hover {
+    transform: scale(1.3);
+    text-decoration: underline; /* Subrayar el enlace al pasar el mouse */
+}
+
+/* Estilos para el formulario */
+.form_hr{
+    margin: 1em;
+    border: 0.1em solid grey;
+    margin-top: 7em;
+}
+.form_form {
+    position: inherit;
+    align-items: center; /* Centra verticalmente */
+    text-align: left;
+    margin-left: 6%;
+    margin-right: 6%;
+    display: flex; /* Utiliza el modelo de caja flexible */
+    flex-direction: column; /* Alinea los elementos en columna */
+    justify-content: center; /* Centra verticalmente los elementos */
+    height: 100vh; /* Establece la altura al 100% del viewport */
+}
+
+
+.form_h2 {
+    font-size: 24px;
+    color: #b1b1b1;
+    
+}
+
+.div_form {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 60vw;
+    
+}
+
+.label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+textarea {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+div a {
+    text-decoration: none;
+    color: #333;
+    margin-right: 10px;
+}
+
+
+.btn_form {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn_form:hover {
+    background-color: #0056b3;
+}
+
+/* Enlace a GitHub */
+#profile-link {
+    display: block;
+    height: 3rem;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+    color: #b3b2b2;
+     background: linear-gradient(
+        70deg,
+        #f0f0f085,
+        hsl(0, 0%, 20%)
+    );
+    
+}
+#profile-link:hover {
+    color: #111111;
+}
+
+/* Consulta de Medios */
+@media (max-width: 768px) {
+    .video_muted {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Utiliza object-fit para cubrir toda la pantalla */
+        z-index: -1; /* Asegura que el video esté detrás de otros elementos */
+    }
+    .form_form{
+        width: 100vw;
+        margin:0 auto;
+        
+    }
+    
+}
+
